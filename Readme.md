@@ -11,7 +11,6 @@ The Property Evaluation System is a web application
 - MySQL
 - Elasticsearch 8.9.1
 - Visual Studio Code
-- Eclipse IDE
 - Camunda Modeler
 
 ## Installation
@@ -24,7 +23,6 @@ Before installing the Property Evaluation System, ensure you have the following 
 - Elasticsearch 8.9.1
 - MySQL
 - Visual Studio Code
-- Eclipse IDE
 - Camunda Modeler
 
 [Instructions on how to install each of these prerequisites can be found on their respective websites.]
@@ -35,6 +33,11 @@ Once you have installed the prerequisites, follow these steps to install the Pro
    - Install MySQL if not already installed.
    - Create a new database schema for the Property Evaluation System.
    - Configure the database connection properties in the microservices' configuration files.
+   - run the following script INSERT INTO your_table_name (id, business_unit, contact_number, initiator_name, password, username) VALUES
+                              (1, 'Business Unit A', '123-456-7890', 'Initiator A', 'password123', 'userA'),
+                              (2, 'Business Unit B', '234-567-8901', 'Initiator B', 'password456', 'userB'),
+                              (3, 'Business Unit C', '345-678-9012', 'Initiator C', 'password789', 'userC');
+
 
 2. **Start Camunda Engine, Operate, and Elasticsearch:**
    - Navigate to the bin folder of the Camunda, Operate, and Elasticsearch installations.
@@ -44,12 +47,11 @@ Once you have installed the prerequisites, follow these steps to install the Pro
      - `elasticsearch.bat` for Elasticsearch.
 
 3. **Deploy Workflow:**
-   - Design the workflow in Camunda Modeler.
    - Deploy the workflow using the Modeler to the Camunda engine.
    - The workflow is located in the resources folder of the gateway application.
 
 4. **Start Microservices:**
-   - Load all 5 microservices (Authentication, Gateway, Property Management, Comment Management, File Upload Service) into Eclipse.
+   - Load all 5 microservices (Authentication, Gateway, Property Management, Comment Management, File Upload Service).
    - Download Maven packages for the applications.
 
 5. **Start Angular App:**
@@ -77,7 +79,7 @@ Before running the demo of the Property Evaluation System, follow these steps:
 
 3. **Set Up the Angular App:**
    - Ensure the Angular app is running on `localhost:4200`.
-   - Implement the login page with username and password fields.
+   - Implement the login page with username and password fields. 
    - Implement the property evaluation form.
 
 4. **Set Up the Backend:**
@@ -121,9 +123,16 @@ Before running the demo of the Property Evaluation System, follow these steps:
 - [Authentication Service](https://github.com/shreyasunhle0110/Authentication)
 
 ## Reference Images
-Login Page :![image](https://github.com/shreyasunhle0110/bank-property-evaluation/assets/30310896/42ee8278-bc79-42d9-9680-33953e11fc3c)
+Login Page :![image](https://github.com/shreyasunhle0110/bank-property-evaluation/assets/30310896/572f982d-80e9-4f49-9ae0-ecb2a189f2c6)
+
 Form Page : ![image](https://github.com/shreyasunhle0110/bank-property-evaluation/assets/30310896/f8e37e4a-b2cd-458f-90f8-d63692c0020f)
 Grid Page : ![image](https://github.com/shreyasunhle0110/bank-property-evaluation/assets/30310896/a78e24a2-dd2c-4b28-b778-624dc82653f4)
+Validations : ![image](https://github.com/shreyasunhle0110/bank-property-evaluation/assets/30310896/8c865274-b5cc-4479-a3cf-63861b8a943a)
+operate dashboard : ![image](https://github.com/shreyasunhle0110/bank-property-evaluation/assets/30310896/33149063-0e22-41f7-ac2d-d94315b58b55)
 Operate page : ![image](https://github.com/shreyasunhle0110/bank-property-evaluation/assets/30310896/1299ebcc-bbba-46cc-8da6-287bb70f4fcf)
 Basic Camunda Workflow : ![image](https://github.com/shreyasunhle0110/bank-property-evaluation/assets/30310896/13753539-b714-4f9f-a969-3e31c956d556)
+After Process is completed : ![image](https://github.com/shreyasunhle0110/bank-property-evaluation/assets/30310896/deca1f3c-6c0e-4ce2-9a1a-f39b98311b28)
+
+
+
 
